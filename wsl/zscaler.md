@@ -1,6 +1,6 @@
 # Zscaler
 
-### To add Zscaler certificate to the Debian system do the following:
+### To add Zscaler certificate to a Debian system do the following:
 
 1. Type `certmgr.msc` using Windows search button
 1. In the window, find out the certificate of the proxy:
@@ -12,7 +12,7 @@
 1. Double click the certificate row and go to `Details tab`
 1. Click button `Copy to File`
 1. Select `Base-64 encoded X.509 (.CER)`
-1. Choose the path and finish the export. Name the file `myproxy.cer`
+1. Choose the path and finish the export. Name the file `zscaler.cer`
 1. Copy this certification file into your WSL distro
 1. Install openssl package if not installed:
 
@@ -20,17 +20,17 @@
    apt install -y openssl
    ```
 
-1. Use the following command line to convert
+1. Use the following command line to convert cert type:
 
    ```
-   openssl x509 -inform PEM -in myproxy.cer -out myproxy.crt
+   openssl x509 -inform PEM -in zscaler.cer -out zscaler.crt
    ```
 
-1. Install additional packages and move file to a final destination:
+1. Install additional packages and move file:
 
    ```
    apt install -y ca-certificates
-   cp myproxy.crt /usr/local/share/ca-certificates
+   cp zscaler.crt /usr/local/share/ca-certificates
    update-ca-certificates
    ```
 
