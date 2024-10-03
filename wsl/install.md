@@ -8,4 +8,5 @@ wsl --list --online
 
 ```
 wsl --install -d Debian
+wsl --set-version Debian 2
 ```
