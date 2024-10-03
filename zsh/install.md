@@ -42,3 +42,15 @@ alias ll='ls -lha --color=always'
 alias myip='curl http://ipecho.net/plain; echo'
 alias reload='source ~/.zshrc'
 ```
+
+Edit `.p10k.zsh` and comment `context` section:
+
+https://www.reddit.com/r/zsh/comments/e416xp/prompt_elements_with_powerlevel10k/?rdt=49370
+
+```
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+  ...
+  context                 # user@hostname
+  ...
+)
+```
