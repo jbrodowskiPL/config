@@ -121,6 +121,7 @@ alias distro='cat /etc/*-release'
 alias ll='ls -lha --color=always'
 alias myip='curl http://ipecho.net/plain; echo'
 alias reload='source ~/.zshrc'
+alias tfc='rm -rf .terraform; rm -rf .terraform.lock.hcl'
 
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
